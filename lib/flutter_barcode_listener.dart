@@ -83,13 +83,10 @@ class _BarcodeKeyboardListenerState extends State<BarcodeKeyboardListener> {
       resetScannedCharCodes();
     } else {
       //add character to list of scanned characters;
-      int hashCode = char.hashCode;
-      int length = char!.length;
-
-      if (char == "") {
+      if (char.hashCode == 1) {
         _scannedChars.add("\u{001d}");
       } else {
-        _scannedChars.add(char);
+        _scannedChars.add(char!);
       }
     }
   }
